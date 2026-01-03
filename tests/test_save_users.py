@@ -4,16 +4,16 @@ from unittest.mock import Mock
 
 
 class UserSavingRepositoryInterface(metaclass=ABCMeta):
-    def __init__(self,User_Saving_Repository,presenter):
-         self.presenter = presenter
+  pass
 
-    def execute(self, param):
-      self.presenter.present(param)
 
 
 class SavingUserUseCase:
+    def __init__(self, User_Saving_Repository, presenter):
+        self.presenter = presenter
     def execute(self, param):
-        pass
+      self.presenter.present(param)
+
 
 
 class PresenterInterface(ABC):
